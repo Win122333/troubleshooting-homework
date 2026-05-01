@@ -10,3 +10,7 @@
 | C2 CompilerThread0 | 217.21s | 11713.14ms | 5.39% |
 | http-nio-8081-exec-4 | 213.38s | 5149.56ms | 2.41% |
 | http-nio-8081-exec-1 | 213.38s | 3249.87ms | 1.52% |
+
+
+***Скриншоты из графаны***
+![Фото дашборда с Grafana](imgs/grafanaDashboards.png)
