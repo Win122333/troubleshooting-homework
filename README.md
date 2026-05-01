@@ -16,7 +16,7 @@
 ![Фото дашборда с Grafana](imgs/grafanaDashboards.png)
 ![Фото моего дашборда](imgs/customDashboards.png)
 
-##Мониторинг (Actuator, Prometheus, Grafana)
+## Мониторинг (Actuator, Prometheus, Grafana)
 
 В проекте подключен Spring Boot Actuator с экспортом метрик для Prometheus. Для визуализации используется Grafana.
 
