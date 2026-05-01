@@ -21,6 +21,12 @@ public class ClientService {
     public ClientDto create(ClientDto request) {
         log.trace(">> clientService.create()");
         log.debug("Входные параметр: clientDto: {}", request);
+        if (request.firstName().isEmpty() ||
+            request.lastName().isEmpty() ||
+            request.address().isEmpty()
+        ) {
+            log.warn("Передан клиент с пустым полем");
+        }
         return clientMapper.toDto(
             clientRepository.save(clientMapper.toEntity(request))
         );
@@ -46,7 +52,7 @@ public class ClientService {
         return clientMapper.toDto(
             clientRepository.findById(clientId).orElseThrow(
                 () -> {
-                    log.warn("Клиент с id = {} не найден", clientId);
+                    log.error("Клиент с id = {} не найден", clientId);
                     return new ClientNotFoundException("Клиент с данным id не найден");
                 }
             )
@@ -63,10 +69,15 @@ public class ClientService {
     public void generateClients(Integer n) {
         log.trace(">> clientService.generateClients()");
         log.debug("Входные параметры: n: {}", n);
+        if (n <= 0) {
+            log.warn("Передали n <= 0");
+            return;
+        }
         for (int i = 0; i < n; i++) {
             Client client = generateClient(i);
 
-            log.debug("Создан клиент = {}", client);//Честно боюсь в цикле логировать))))
+            if (i % 100 == 0)
+                log.debug("Сгенерировано i = {} клиентов", client);//Честно боюсь в цикле логировать))))
 
             clientRepository.save(client);
         }
