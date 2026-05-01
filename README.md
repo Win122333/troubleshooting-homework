@@ -1,6 +1,6 @@
 ***Домащняя работа по Troubleshooting***
 
-[![Coverage Status](https://coveralls.io/repos/Win122333/troubleshooting-homework/badge.svg)](https://coveralls.io/github/Win122333/troubleshooting-homework)
+[![Coverage Status](https://coveralls.io/repos/Win122333/troubleshooting-homework/badge.svg)](https://coveralls.io/github/Win122333/troubleshooting-homework) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Win122333_troubleshooting-homework&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Win122333_troubleshooting-homework) 
 
 ### Анализ нагрузки потоков (Thread Dump)
 
