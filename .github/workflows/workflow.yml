@@ -31,6 +31,16 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           
+      - name: SonarCloud Scan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR }}
+        run: >
+          mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+          -Dsonar.projectKey=ТВОЙ_КЛЮЧ_ПРОЕКТА
+          -Dsonar.organization=ТВОЯ_ОРГАНИЗАЦИЯ
+          -Dsonar.host.url=https://sonarcloud.io
+          
       - name: Build JAR (package)
         run: mvn -B clean package -DskipTests
 
