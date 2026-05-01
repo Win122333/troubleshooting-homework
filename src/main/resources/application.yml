@@ -10,3 +10,16 @@ management:
         include:
           - health
           - prometheus
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:troubleshooting
+    username: sa
+    password:
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      show-sql: true
+      properties.hibernate.format_sql: true
