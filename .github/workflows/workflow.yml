@@ -27,7 +27,7 @@ jobs:
         run: mvn clean test jacoco:report
         
       - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2
+        uses: coverallsapp/github-action@6484a967193eb7799066060155099318a8b1227a
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           
@@ -45,7 +45,7 @@ jobs:
         run: mvn -B clean package -DskipTests
 
       - name: Create Release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@a2e5d59046647970d2354897042a96939634e9e0
         with:
           artifacts: "target/*.jar"
           tag: "v1.0.${{ github.run_number }}"
