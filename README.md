@@ -1,5 +1,7 @@
 ***Домащняя работа по Troubleshooting***
 
+[![Coverage Status](https://coveralls.io/repos/github/win122333/troubleshooting-homework/badge.svg)](https://coveralls.io/github/win122333/troubleshooting-homework)
+
 ### Анализ нагрузки потоков (Thread Dump)
 
 На основе снятого дампа потоков был рассчитан процент занятого процессорного времени для выделения топ-3 самых нагруженных потоков.
