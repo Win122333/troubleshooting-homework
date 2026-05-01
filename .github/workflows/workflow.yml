@@ -37,8 +37,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR }}
         run: >
           mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-          -Dsonar.projectKey=ТВОЙ_КЛЮЧ_ПРОЕКТА
-          -Dsonar.organization=ТВОЯ_ОРГАНИЗАЦИЯ
+          -Dsonar.projectKey=Win122333_troubleshooting-homework
+          -Dsonar.organization=win122333
           -Dsonar.host.url=https://sonarcloud.io
           
       - name: Build JAR (package)
