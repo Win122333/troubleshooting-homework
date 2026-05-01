@@ -1,6 +1,6 @@
 ***Домащняя работа по Troubleshooting***
 
-[![Coverage Status](https://coveralls.io/repos/github/win122333/troubleshooting-homework/badge.svg)](https://coveralls.io/github/win122333/troubleshooting-homework)
+[![Coverage Status](https://coveralls.io/repos/Win122333/troubleshooting-homework/badge.svg)](https://coveralls.io/github/Win122333/troubleshooting-homework)
 
 ### Анализ нагрузки потоков (Thread Dump)
 
