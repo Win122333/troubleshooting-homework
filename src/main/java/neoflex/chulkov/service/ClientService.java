@@ -77,7 +77,7 @@ public class ClientService {
             Client client = generateClient(i);
 
             if (i % 100 == 0)
-                log.debug("Сгенерировано i = {} клиентов", client);//Честно боюсь в цикле логировать))))
+                log.debug("Сгенерировано i = {} клиентов", client);//Честно говоря, боюсь в цикле логировать))))
 
             clientRepository.save(client);
         }
