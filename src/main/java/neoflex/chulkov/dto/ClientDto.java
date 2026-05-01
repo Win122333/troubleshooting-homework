@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public record ClientDto(
     @Schema(description = "Имя клиента", example = "John")
     String firstName,
+
     @Schema(description = "Фамилия клиента", example = "Johnovich")
     String lastName,
     @Schema(description = "Возраст клиента", example = "12")
